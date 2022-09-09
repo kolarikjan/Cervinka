@@ -1,0 +1,86 @@
+@import "resets";
+@import "variables";
+@import "functions";
+
+body {
+
+    background-color: $background-color;
+
+}
+
+a {
+
+    color: $primary-color;
+    font-weight: map-get($font-weights, medium);
+
+}
+
+.header {
+
+    background-color: $secondary-color;
+    padding: 15px 0;
+
+    #{&}__menu {
+
+        @include flexCenter();
+        list-style: none;
+        padding: 10px;
+
+        a {
+
+            margin: 0 10px;
+            font-weight: weight("bold");
+            display: block;
+            font-size: 20px;
+            text-decoration: none;
+
+            &:hover {
+
+                color: $hover-color;
+
+            }
+        }
+
+        @include media("sm") {
+
+            flex-direction: column;
+
+            a {
+
+                margin: 5px 0px;
+
+            }
+
+        }
+
+    }
+}
+
+.main {
+
+    padding: 10px;
+
+    #{&}__paragraph1 {
+
+        margin: 0 0 10px;
+
+        a {
+
+            color: $secondary-color;
+            text-decoration: none;
+
+            &:hover {
+
+                color: $hover-color;
+
+            }
+
+        }
+
+    }
+
+    #{&}__paragraph2 {
+        @extend .main__paragraph1;
+    }
+
+}
