@@ -1,0 +1,44 @@
+@media (min-width: 576px) { 
+    
+}
+@media (min-width: 768px) { 
+    
+}
+@media (min-width: 992px) { 
+
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1400px;
+        padding: 0;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1500px) {
+    .container {
+        padding: 0 50px;
+    }
+}
+
+/* GLOBAL CLASSES AND TAGS */
+body {
+    overflow-x: hidden;
+    background-color: #ededf4;
+}
+.bg-dark {
+    background-color: #09152a !important;
+}
+.bg-light {
+    background-color: #eceff3 !important;
+}
+.w-fit {
+    width: fit-content;
+    width: -moz-fit-content;
+}
+.navbar-light .navbar-toggler {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+* {
+    font-family: "Roboto", sans-serif;
+}
