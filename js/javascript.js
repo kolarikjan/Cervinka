@@ -1,10 +1,7 @@
 $(document).ready(function () {
     
-    $(".fancybox").fancybox({
+    Fancybox.bind("[data-fancybox]", {});
 
-        'hideOnContentClick': true
-
-    });
     $(".popup-activator").click(function (e) {
 
         $(this).closest(".popup-custom").children(".popup-content").css("display", "block");
@@ -19,38 +16,57 @@ $(document).ready(function () {
         
     });
 
-    $(".product-btn-info").click(function (e) {
-
-        e.preventDefault();
-
-        $(this).closest(".product").children(".product-extended").css("display", "block");
-        
-        $('.product-extended--carousel').owlCarousel({
-            center: true,
-            items:3,
-            loop:true,
-            margin:20,
-            nav:true,
-            dots:false,
-            navText: ["<img src='img/pagination1.png'>", "<img src='img/pagination2.png'>"],
-            responsive:{
-                0:{
-                    items:2
-                },
-                768:{
-                    items:3
-                },
+    $('.banner__homepage').owlCarousel({
+        items:1,
+        loop:false,
+        rewind:true,
+        margin:0,
+        nav:false,
+        dots:false
+    });
+    $('.gallery__homepage').owlCarousel({
+        items:1,
+        loop:false,
+        rewind:true,
+        margin:10,
+        nav:true,
+        dots:false,
+        navText:["<img src='img/arrow-slider1.png' alt='slider arrow'><img src='img/arrow-slider2.png' alt='slider arrow'>","<img src='img/arrow-slider1.png' alt='slider arrow'><img src='img/arrow-slider2.png' alt='slider arrow'>"],
+        responsive : {
+            0 : {
+                items : 2,
+            },
+            576 : {
+                items : 3,
+            },
+            993 : {
+                items : 4,
             }
-        });
-
+        }
     });
-
-    $(".porduct-extended--close").click(function (e) { 
-
-        e.preventDefault();
-        
-        $(this).closest(".product-extended").css("display", "none");
-        
+    $('.brands__homepage').owlCarousel({
+        items:1,
+        loop:false,
+        rewind:true,
+        margin:30,
+        nav:false,
+        dots:false,
+        responsive : {
+            0 : {
+                items : 1,
+            },
+            576 : {
+                items : 2,
+            },
+            993 : {
+                items : 3,
+            },
+            1200 : {
+                items : 4,
+            },
+            1500 : {
+                items : 5,
+            }
+        }
     });
-
 });

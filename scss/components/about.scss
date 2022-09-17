@@ -1,0 +1,53 @@
+.about {
+    background-color: $background-color-grey;
+    &__description p {
+        color: $secondary-color-darkbg;
+        font-size: 14px;
+        line-height: 28px;
+        margin-bottom: 1.5rem;
+    }
+    &__numbers {
+        margin-top: 4rem;
+        @include flexCenter();
+        @include media("sm") {
+            flex-direction: column;
+        }
+        & > div {
+            padding: 0 1rem;
+            width: calc(100% / 3);
+            text-align: center;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            height: 100%;
+            img {
+                margin: 0 auto 1rem;
+            }
+            &:not(:last-of-type) {
+                border-right: 1px solid #444444;
+            }
+            @include media("sm") {
+                width: 100%;
+                &:not(:last-of-type) {
+                    border-right: 0;
+                    border-bottom: 1px solid #444444;
+                    margin-bottom: 1.5rem;
+                    padding-bottom: 1.5rem;
+                }
+            }
+        }
+        &-count {
+            color: $highlight-color;
+            font-size: 40px;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        &-description {
+            min-height: 48px;
+            color: $primary-color-darkbg;
+        }
+    }
+    .section__title h2 {
+        margin-bottom: 3rem;
+    }
+}

@@ -1,0 +1,20 @@
+.button-red {
+    display: block;
+    border-radius: $button-radius;
+    border: 2px solid $highlight-color;
+    background-color: $highlight-color;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 0.6rem 1rem;
+    color: $primary-color-darkbg;
+    @include widthFit();
+    &:hover {
+        background-color: $primary-color;
+        color: $primary-color-darkbg;
+        text-decoration: none;
+    }
+    img {
+        margin-right: 0.5rem;
+        display: inline-block;
+    }
+}

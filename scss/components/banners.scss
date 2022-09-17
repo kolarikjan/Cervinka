@@ -1,0 +1,64 @@
+.banner {
+    &__contentbox {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 70%;
+        height: 100%;
+        @include flexCenter();
+        padding: 0 10rem;
+        @include media("xl") {
+            padding: 0 6rem;
+            width: 100%;
+        }
+        @include media("md") {
+            padding: 0;
+            width: 100%;
+        }
+    }
+    &__title {
+        color: $primary-color-darkbg;
+        font-size: 62px;
+        text-shadow: 3px 3px 0px rgb(160 160 162);
+        letter-spacing: -2.25px;
+        font-weight: 600;
+        margin-bottom: 2rem;
+        @include media("md") {
+            font-size: 45px;
+            letter-spacing: -1px;
+            text-shadow: 2px 2px 0px rgb(160 160 162);
+            margin-bottom: 1rem;
+        }
+    }
+    &__text {
+        color: $primary-color-darkbg;
+        text-shadow: 1px 1px 0px rgb(160 160 162);
+        font-size: 18px;
+        margin-bottom: 2rem;
+        @include media("md") {
+            margin-bottom: 1.5rem;
+        }
+    }
+    .button-red {
+        padding: 0.75rem 1.75rem;
+        font-weight: 400;
+        font-size: 13px;
+        &:hover {
+            border-color: $primary-color;
+        }
+    }
+    &__item {
+        img {
+            max-height: 874px;
+            max-width: 102%;
+            width: 102% !important;
+            object-fit: cover;
+            @include media("xl") {
+                min-height: 600px;
+            }
+            @include media("sm") {
+                min-height: 500px;
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.gallery {
+    .item {
+        a {
+            display: block;
+            margin-bottom: 10px;
+        }
+    }
+    .owl-nav {
+        position: absolute;
+        top: -80px;
+        right: 0;
+        .owl-next img:first-of-type {
+            transform: rotate(180deg);
+        }
+        .owl-prev img:last-of-type {
+            transform: rotate(180deg);
+        }
+        @include media("lg") {
+            position: unset;
+        }
+        button {
+            img {
+                &:last-of-type {
+                    display: none;
+                }
+                
+            }
+            &:hover {
+                img {
+                    &:first-of-type {
+                        display: none;
+                    }
+                    &:last-of-type {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

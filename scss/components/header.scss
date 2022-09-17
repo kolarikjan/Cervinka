@@ -1,0 +1,112 @@
+.header {
+    background-color: $background-color-dark;
+    &__nav {
+        padding: 1rem 1rem;
+        @include media("xxl") {
+            flex-wrap: wrap;
+            @include flexCenter();
+        }
+        @include media("lg") {
+            justify-content: space-between;
+        }
+        @include media("sm") {
+            padding: 1rem 0;
+        }
+    }
+    #head-nav {
+        padding-left: 8rem;
+        .nav-item {
+            .nav-link {
+                color: $primary-color-darkbg;
+                font-size: 17px;
+                font-weight: 500;
+                padding: 0.5rem 1rem;
+                margin-right: 0.25rem;
+                border: 2px solid transparent;
+                @include media("lg") {
+                    margin-right: 0;
+                    margin-bottom: 0.25rem;
+                }
+            }
+            &.active .nav-link, .nav-link:hover {
+                color: $highlight-color;
+                border: 2px solid $highlight-color;
+                border-radius: $button-radius;
+            }
+            &.header__button {
+                display: none;
+                @include media("xxl") {
+                    display: block;
+                }
+            }
+            &.header__contact {
+                display: none;
+                @include media("lg") {
+                    display: flex;
+                }
+            }
+        }
+        @include media("xxl") {
+            padding-left: 0rem;
+            padding: 0.75rem 0;
+            width: 100%;
+            justify-content: center;
+        }
+        @include media("lg") {
+            padding: 1.25rem 0;
+        }
+    }
+    &__rightbox {
+        .header__button {
+            @include media("xxl") {
+                display: none;
+            }
+        }
+        .header__contact {
+            @include media("lg") {
+                display: none;
+            }
+        }
+        @include flexCenterDir(row); 
+        @include media("xxl") {
+            padding: 0.5rem 0;
+        }
+        @include media("lg") {
+            width: 100%;
+        }
+        @include media("lg") {
+            display: none;
+        }
+    }
+    &__contact {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 0.25rem 0 0.25rem 4rem;
+        margin-left: 1.75rem;
+        background-image: url("../img/icon-contact.png");
+        background-position: left center;
+        background-repeat: no-repeat;
+        &-phone {
+            color: $primary-color-darkbg !important;
+            font-weight: 600;
+        }
+        &-email {
+            color: $highlight-color !important;
+            font-weight: 500;
+        }
+        a {
+            font-size: 17px;
+            line-height: 23px;
+            @include media("lg") {
+                font-size: 15px;
+                line-height: 21px;
+            }
+        }
+        @include media("lg") {
+            margin-left: 0;
+            margin-top: 1.5rem;
+        }
+    }
+}

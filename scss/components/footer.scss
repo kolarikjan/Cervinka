@@ -1,0 +1,108 @@
+.footer {
+    background-color: $background-color-dark;
+    padding: 5rem 0;
+    &__address {
+        background-image: url("../img/icon-pin.png");
+        background-repeat: no-repeat;
+        background-position: left top;
+        padding-left: 2.5rem;
+        p {
+            margin-bottom: 0;
+            color: $primary-color-darkbg;
+            font-size: 15px;
+            line-height: 24px;
+        }
+    }
+    &__contact {
+        background-image: url("../img/icon-phone.png");
+        background-repeat: no-repeat;
+        background-position: left top 10px;
+        padding-left: 2.5rem;
+        margin-top: 2rem;
+        .footer__email {
+            font-size: 30px;
+            font-weight: 600;
+        }
+        a {
+            display: block;
+            color: $primary-color-darkbg;
+            &:hover {
+                color: $highlight-color;
+                text-decoration: none;
+            }
+        }
+    }
+    &__preTitle {
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0.5px;
+        color: $primary-color-darkbg;
+        display: block;
+        margin-bottom: 0.75rem;
+        @include media("md") {
+            margin-top: 3rem;
+        }
+    }
+    &__title {
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: -0.5px;
+        color: $primary-color-darkbg;
+        margin-bottom: 1.25rem;
+    }
+    form {
+        input:not([type="submit"]), textarea {
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #595959;
+            color: $primary-color-darkbg;
+            padding: 0.75rem 0;
+            font-size: 15px;
+            width: 100%;
+            display: block;
+            font-weight: 300;
+            resize: none;
+            margin-bottom: 0.5rem;
+            &::placeholder {
+                color: $primary-color-darkbg;
+            }
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+        input[type="submit"] {
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+        textarea {
+            min-height: 80px;
+            margin-bottom: 2rem;
+        }
+    }
+    &__socials {
+        margin-top: 1.4rem;
+        display: flex;
+        align-items: center;
+        & > a {
+            &:not(:last-of-type) {
+                margin-right: 1.5rem;
+            }
+        }
+    }
+}
+.copyright {
+    padding: 2rem 0;
+    text-align: center;
+    p {
+        color: #6f6f6f;
+        text-transform: uppercase;
+        font-size: 13px;
+        margin-bottom: 0;
+        font-weight: 400;
+        a {
+            color: #6f6f6f !important;
+        }
+    }
+}

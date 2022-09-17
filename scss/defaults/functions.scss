@@ -1,7 +1,3 @@
-@function weight($weight) {
-    @return map-get($font-weights, $weight);
-}
-
 @function break($break) {
     @return map-get($breaks, $break);
 }
@@ -19,16 +15,20 @@
     flex-direction: $direction;
 }
 
-@mixin theme($light-theme: true) {
-   @if $light-theme {
-        background-color: lighten($primary-color, 100%);
-        color: darken($primary-color, 100%);
-   }
+@mixin widthFit() {
+    width: fit-content;
+    width: -moz-fit-content;
 }
 
 @mixin media($size) {
     $pixelSize: break($size);
     @media (max-width: $pixelSize) {
+        @content;
+    }
+}
+@mixin min-media($size) {
+    $pixelSize: break($size);
+    @media (min-width: $pixelSize) {
         @content;
     }
 }

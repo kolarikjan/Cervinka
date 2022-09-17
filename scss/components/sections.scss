@@ -1,0 +1,19 @@
+.section {
+    padding: 5rem 0 6rem;
+    &__title h2 {
+        font-size: 36px;
+        font-weight: 600;
+        letter-spacing: -1px;
+        text-align: center;
+        display: block;
+        width: 100%;
+        margin-bottom: 4rem;
+    }
+    &.section__dark &__title {
+        h2 {
+            color: $primary-color-darkbg;
+            text-align: left;
+            font-size: 34px;
+        }
+    }
+}
