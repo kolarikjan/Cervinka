@@ -1,0 +1,67 @@
+.contactform {
+    &__heading {
+        margin-bottom: 4rem;
+        h3 {
+            color: $primary-color;
+            font-size: 36px;
+            font-weight: 600;
+            letter-spacing: -1px;
+            text-align: center;
+            display: block;
+            width: 100%;
+            margin-bottom: 0.75rem;
+        }
+        span {
+            @extend .footer__preTitle;
+            color: $secondary-color;
+            text-align: center;
+            width: 100%;
+            display: block;
+            @include media("md") {
+                margin-top: 0;
+            }
+        }
+    }
+    &__form {
+        background-color: $background-color-light;
+        padding: 5rem 0;
+        input, .form__input {
+            &:not([type="submit"]) {
+                background-color: $background-color;
+                padding: 1rem 1.5rem;
+                color: $primary-color;
+                font-size: 14px;
+                width: 100%;
+                font-weight: 500;
+                border: 1px solid transparent;
+                margin-bottom: 30px;
+                @include media("md") {
+                    margin-bottom: 10px;
+                }
+            }
+            &::placeholder {
+                color: $primary-color;
+                font-weight: 500;
+            }
+        }
+        textarea {
+            @extend .form__input;
+            min-height: 150px;
+            resize: none;
+        }
+        input[type="submit"] {
+            margin: 30px auto 0;
+            background-image: url("../img/arrow-submitred.png");
+            background-repeat: no-repeat;
+            background-position: right 20px center;
+            padding: 1rem 4rem 1rem 2rem;
+            font-size: 13px;
+            @include media("md") {
+                margin: 15px auto 0;
+            }
+            &:hover {
+                border-color: $primary-color;
+            }
+        }
+    }
+}

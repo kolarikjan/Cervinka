@@ -27,6 +27,10 @@ h1,h2,h3,h4,h5,h6 {
 p,ul,ol {
   color: $secondary-color;
 }
+input, textarea {
+  outline: none;
+  box-shadow: none;
+}
 .navbar-toggler {
   border: none !important;
   box-shadow: none !important;

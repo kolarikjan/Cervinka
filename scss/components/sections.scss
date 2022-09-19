@@ -14,6 +14,9 @@
             color: $primary-color-darkbg;
             text-align: left;
             font-size: 34px;
+            @include min-media("xxl") {
+                padding-top: 2rem;
+            }
         }
     }
 }

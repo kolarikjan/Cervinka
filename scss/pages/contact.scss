@@ -1,0 +1,39 @@
+.subpage .contact {
+    &__box {
+        background-repeat: no-repeat;
+        background-position: left top 0px;
+        padding-left: 2.5rem;
+        @include media("xl") {
+            margin-bottom: 3rem;
+        }
+    }
+    &__address {
+        background-image: url("../img/icon-pinred.png");
+    }
+    &__hours {
+        background-image: url("../img/icon-timered.png");
+    }
+    &__contact {
+        margin-top: 3rem;
+        background-image: url("../img/icon-phonered.png");
+        background-position: left top 5px;
+        @include media("xl") {
+            margin-top: 0;
+        }
+        &-phone {
+            font-size: 30px;
+            font-weight: 700;
+            color: $primary-color;
+            padding: 0.25rem;
+            display: block;
+        }
+        &-email {
+            font-weight: 500;
+        }
+    }
+    &__map {
+        @include min-media("xl") {
+            margin-top: 4rem;
+        }
+    }
+}
