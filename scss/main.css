@@ -102,6 +102,9 @@ input, textarea {
 .header #head-nav .nav-item.header__button {
   display: none;
 }
+.header #head-nav .nav-item.header__button a {
+  width: 100%;
+}
 @media (max-width: 1500px) {
   .header #head-nav .nav-item.header__button {
     display: block;
@@ -198,6 +201,7 @@ input, textarea {
   background-image: url("../img/subpage-bg.png");
   background-position: center center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 .header__breadcrumb {
   text-align: center;
@@ -216,6 +220,11 @@ input, textarea {
   width: fit-content;
   width: -moz-fit-content;
   margin: 1.5rem auto 0;
+}
+@media (max-width: 576px) {
+  .header__breadcrumb ul {
+    display: none;
+  }
 }
 .header__breadcrumb ul li a {
   color: #fff;
@@ -742,11 +751,40 @@ input, textarea {
 .subpage {
   padding: 7rem 0;
 }
+@media (max-width: 576px) {
+  .subpage {
+    padding: 5rem 0;
+  }
+}
 .subpage p, .subpage td {
   color: #7e7e7e;
   font-size: 14px;
   margin-bottom: 0;
   line-height: 28px;
+}
+.subpage ol {
+  padding-left: 1rem;
+  margin: 2rem 0;
+}
+.subpage ol li {
+  font-size: 14px;
+  line-height: 35px;
+}
+.subpage ol li::marker {
+  font-weight: 600;
+  color: #000;
+}
+.subpage ul {
+  margin: 2rem 0;
+  font-size: 14px;
+  list-style: none;
+}
+.subpage ul li {
+  padding-left: 1rem;
+  background-image: url("../img/li.png");
+  background-repeat: no-repeat;
+  line-height: 35px;
+  background-position: left top 15px;
 }
 .subpage a {
   font-size: 14px;
@@ -759,29 +797,92 @@ input, textarea {
   font-size: 14px;
   line-height: 28px;
 }
-.subpage h2 {
+.subpage__photo {
+  max-width: 600px;
+  max-height: 430px;
+  padding-left: 4rem;
+  padding-bottom: 4rem;
+  float: right;
+}
+@media (max-width: 1200px) {
+  .subpage__photo {
+    float: unset;
+    padding-left: 0;
+    margin-bottom: 3rem;
+    padding-bottom: 0;
+  }
+}
+.subpage__content h2 {
   color: #000;
-  font-size: 25px;
-  line-height: 32px;
-  margin-bottom: 0.5rem;
+  font-size: 36px;
+  line-height: 54px;
+  margin-bottom: 3rem;
+  margin-top: 4rem;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+@media (max-width: 768px) {
+  .subpage__content h2 {
+    font-size: 28px;
+    line-height: 38px;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+  }
+}
+.subpage__content h3 {
+  color: #000;
+  font-size: 26px;
+  line-height: 40px;
+  margin-bottom: 2.5rem;
+  margin-top: 3.5rem;
   font-weight: 600;
   letter-spacing: -0.5px;
 }
-.subpage h3 {
+@media (max-width: 768px) {
+  .subpage__content h3 {
+    font-size: 22px;
+    line-height: 32px;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+  }
+}
+.subpage__content h4 {
   color: #000;
-  font-size: 21px;
-  line-height: 28px;
-  margin-bottom: 0.5rem;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 2rem;
+  margin-top: 2.5rem;
   font-weight: 600;
   letter-spacing: -0.5px;
 }
-.subpage h4 {
-  color: #000;
-  font-size: 16px;
-  line-height: 26px;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  letter-spacing: -0.5px;
+@media (max-width: 768px) {
+  .subpage__content h4 {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+  }
+}
+.subpage__content table {
+  width: 100%;
+  overflow-y: scroll;
+  border-bottom: 1px solid #eeeeee;
+}
+.subpage__content table thead {
+  background-color: #f5f5f5;
+}
+.subpage__content table thead th {
+  padding: 1rem 1.5rem;
+  letter-spacing: -0.25px;
+  border-top: 1px solid #eeeeee;
+  font-size: 14px;
+}
+.subpage__content table td {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #eeeeee;
+}
+.subpage__content > *:first-child {
+  margin-top: 0;
 }
 
 .subpage .contact__box {
@@ -793,6 +894,12 @@ input, textarea {
   .subpage .contact__box {
     margin-bottom: 3rem;
   }
+}
+.subpage .contact h3 {
+  font-size: 25px;
+  line-height: 32px;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 .subpage .contact__address {
   background-image: url("../img/icon-pinred.png");
